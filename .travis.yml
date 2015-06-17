@@ -33,7 +33,3 @@ before_install:
 
 notifications:
  email: false
-
-install: gradle clean build
-
-script: gradle check
