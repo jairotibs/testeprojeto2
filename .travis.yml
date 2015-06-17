@@ -18,5 +18,5 @@ before_install:
 
 script:
   - ./gradlew tasks
-  - ./gradlew assembleDebug --stackTrace
-  - ./gradlew assembleRelease --stackTrace
+  - ./gradlew assembleDebug
+  - ./gradlew assembleRelease
