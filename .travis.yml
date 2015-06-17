@@ -1,0 +1,18 @@
+language: android
+android:
+  components:
+  - platform-tools
+  - android-22
+  - build-tools-22.0.1
+  - extra
+
+jdk: oraclejdk7
+
+notifications:
+ email: false
+
+before_install:
+ - sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch
+
+script:
+ - ./gradlew clean build
