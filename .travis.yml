@@ -18,5 +18,4 @@ before_install:
 
 script:
   - ./gradlew tasks
-  - ./gradlew assembleDebug
-  - ./gradlew assembleRelease
+  - ./gradlew compileDebugSources
