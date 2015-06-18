@@ -2,32 +2,21 @@ language: android
 
 android:
   components:
-    - platform-tools
-    - tools
-    - android-19
-    - android-20
+    - platform-tools-21
+    - tools-21
     - android-21
-    - android-22
-    - build-tools-20.0.0
     - build-tools-21.1.1
-    - build-tools-22.0.1
-    - extra
+    - extra-21
   
     # Additional components
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-    - addon-google_apis-google-19
-    - addon-google_apis-google-20
     - addon-google_apis-google-21
-    - addon-google_apis-google-22
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-    - sys-img-armeabi-v7a-android-19
-    - sys-img-armeabi-v7a-android-20
     - sys-img-armeabi-v7a-android-21
-    - sys-img-armeabi-v7a-android-22
     # - sys-img-x86-android-17
 
 jdk: oraclejdk8
