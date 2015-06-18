@@ -1,13 +1,20 @@
 language: android
 
+jdk: oraclejdk8
+
 android:
   components:
-    - platform-tools
-    - tools
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    # - platform-tools
+    # - tools
+
+    # The BuildTools version used by your project
+    - build-tools-22.0.1
+
+    # The SDK version used to compile your project
     - android-22
-    - build-tools-21.1.1
-    - extra
-  
+
     # Additional components
     - extra-google-google_play_services
     - extra-google-m2repository
@@ -19,19 +26,11 @@ android:
     - sys-img-armeabi-v7a-android-19
     - sys-img-x86-android-17
 
-jdk: oraclejdk8
-
-notifications:
- email: false
-
 before_install:
     - sudo apt-get update -qq
     - chmod +x gradlew
 
 script:
-  - ./gradlew tasks --all
-  - ./gradlew init
-  - ./gradlew androidDependencies
   - ./gradlew clean
   - ./gradlew build
   - ./gradlew assembleDebug
