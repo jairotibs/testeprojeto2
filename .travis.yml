@@ -22,7 +22,7 @@ android:
 jdk: oraclejdk8
 
 notifications:
- email: false
+ email: true
 
 before_install:
     - sudo apt-get update -qq
