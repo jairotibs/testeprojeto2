@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/jairotibs/testeprojeto2.png?branch=master)](https://travis-ci.org/jairotibs/testeprojeto2)
-# testeprojeto2
+# testeprojeto2 [![Build Status](https://travis-ci.org/jairotibs/testeprojeto2.png?branch=master)](https://travis-ci.org/jairotibs/testeprojeto2)
 
 Is an Travis test and deploy integration with an Android app using Gradle.
 The Travis script (.travis.yml) is configured to customize the build.
