@@ -18,6 +18,9 @@ before_install:
 
 script:
   - ls
-  - ./gradlew tasks
-  - ./gradlew assembleDebug
-  - ./gradlew installDebug -- stackTrace
+  - ./gradlew tasks --all
+  - ./gradlew init
+  - ./gradlew androidDependencies
+  - ./gradlew clean
+  - ./gradlew build
+  - ./gradlew chack
