@@ -1,12 +1,25 @@
 language: android
+
 android:
   components:
   - platform-tools
+  - tools
   - android-22
   - build-tools-22.0.1
   - extra
+  
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-19
 
-jdk: oraclejdk7
+    # Specify at least one system image,
+    # if you need to run emulator(s) during your tests
+    - sys-img-armeabi-v7a-android-19
+    - sys-img-x86-android-17
+
+jdk: oraclejdk8
 
 notifications:
  email: false
@@ -24,3 +37,4 @@ script:
   - ./gradlew androidDependencies
   - ./gradlew clean
   - ./gradlew build
+  - ./gradlew assembleDebug
