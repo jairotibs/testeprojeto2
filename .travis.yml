@@ -1,16 +1,13 @@
-language: android
+anguage: android
 
-# Set the jdk version
 jdk: oraclejdk8
 
 android:
   components:
-    # Default components (more recent ones)
-    - platform-tools
-    - tools
-    - android
-    - build-tools
-    - extra
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    # - platform-tools
+    # - tools
 
     # The BuildTools version used by your project
     - build-tools-21.1.1
@@ -24,23 +21,16 @@ android:
     - extra-android-m2repository
     - addon-google_apis-google-19
 
-    # Specify at least one system image, if you need to run emulator(s) during your tests
+    # Specify at least one system image,
+    # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-19
     - sys-img-x86-android-17
 
-# Allow email notifications
-notifications:
- email: true
-
-# Do before start the build
 before_install:
     - sudo apt-get update -qq
     - chmod +x gradlew
 
-# Scriptlet to run project (using android built-in gradle)
 script:
-  - ./gradlew init    # Start gradle
-  - ./gradlew androidDependencies   # Get the dependecies
-  - ./gradlew clean   # Clean enviroment
-  - ./gradlew build   # Build project itself (this tests and buid entire app)
-  - ./gradlew assembleDebug   # Assemble app in the VM
+  - ./gradlew clean
+  - ./gradlew build
+  - ./gradlew assembleDebug
