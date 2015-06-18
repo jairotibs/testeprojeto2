@@ -1,10 +1,7 @@
-# Language (or framework) of the project
 language: android
 
-# Android-related dependecies
 android:
   components:
-    # Default components
     - platform-tools
     - tools
     - android-22
@@ -22,22 +19,19 @@ android:
     - sys-img-armeabi-v7a-android-19
     - sys-img-x86-android-17
 
-# Set jdk version
 jdk: oraclejdk8
 
-# Allow email notifications
 notifications:
  email: true
 
-# Do before start the build
 before_install:
     - sudo apt-get update -qq
     - chmod +x gradlew
 
-# Scriptlet to run project (using android built-in gradle)
 script:
-  - ./gradlew init    # Start gradle
-  - ./gradlew androidDependencies   # Get the dependecies
-  - ./gradlew clean   # Clean enviroment
-  - ./gradlew build   # Build project itself (this tests and buid entire app)
-  - ./gradlew assembleDebug   # Assemble app in the VM
+  - ./gradlew tasks --all
+  - ./gradlew init
+  - ./gradlew androidDependencies
+  - ./gradlew clean
+  - ./gradlew build
+  - ./gradlew assembleDebug
