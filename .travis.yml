@@ -17,6 +17,7 @@ before_install:
  - chmod +x gradlew
 
 script:
+  - ls
   - ./gradlew tasks
   - ./gradlew assembleDebug
   - ./gradlew installDebug -- stackTrace
